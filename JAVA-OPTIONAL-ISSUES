@@ -1,0 +1,18 @@
+Type Mismatch cannot convert Optional<UserDTO> to UserDTO
+
+This is the fix: I cast the optional object back to UserDTO
+
+@PutMapping(value = "/{id}", consumes = MediaType.APPLICATION_JSON_VALUE)
+	public ResponseEntity<UserDTO> updateUser(@PathVariable("id") final Long id, @RequestBody UserDTO user) {
+		
+		UserDTO currentUser = (UserDTO)userJpaRepository.findAllById(id);
+		
+		currentUser.setName(user.getName());
+		currentUser.setPassword(user.getPassword());
+		currentUser.setAddress(user.getAddress());
+		currentUser.setEmail(user.getEmail());
+		
+		userJpaRepository.saveAndFlush(currentUser);
+		
+		return new ResponseEntity<UserDTO>(currentUser, HttpStatus.OK);
+	}
