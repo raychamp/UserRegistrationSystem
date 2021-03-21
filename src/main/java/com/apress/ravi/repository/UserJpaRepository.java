@@ -7,7 +7,7 @@ import com.apress.ravi.dto.UserDTO;
 
 @Repository
 public interface UserJpaRepository extends JpaRepository<UserDTO, Long> {
-	
+
 	UserDTO findByName(String name);
 
 	UserDTO findAllById(Long id);

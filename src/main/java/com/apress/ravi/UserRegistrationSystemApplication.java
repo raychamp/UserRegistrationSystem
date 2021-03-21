@@ -12,7 +12,7 @@ public class UserRegistrationSystemApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(UserRegistrationSystemApplication.class, args);
 	}
-	
+
 	@RequestMapping("/hello")
 	public String greeting() {
 		return "Hello Ray";
