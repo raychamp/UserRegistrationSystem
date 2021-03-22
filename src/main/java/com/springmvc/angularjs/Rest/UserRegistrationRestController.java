@@ -1,4 +1,4 @@
-package com.apress.ravi.Rest;
+package com.springmvc.angularjs.Rest;
 
 import java.util.List;
 
@@ -19,9 +19,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.apress.ravi.Exception.CustomErrorType;
-import com.apress.ravi.dto.UserDTO;
-import com.apress.ravi.repository.UserJpaRepository;
+import com.springmvc.angularjs.Exception.CustomErrorType;
+import com.springmvc.angularjs.dto.UserDTO;
+import com.springmvc.angularjs.repository.UserJpaRepository;
 
 @RestController
 @RequestMapping("/api/user")

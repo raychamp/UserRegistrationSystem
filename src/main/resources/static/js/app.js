@@ -13,7 +13,7 @@ app.config(function($routeProvider) {
 			controller : 'registerUserController'
 		}).when('/update-user/:id', {
 			templateUrl : '/template/userupdation.html' ,
-			controller : 'userDetailsController'
+			controller : 'usersDetailsController'
 		}).otherwise({
 			redirectTo : '/home',
 			templateUrl : '/template/home.html',

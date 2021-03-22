@@ -1,4 +1,4 @@
-package com.apress.ravi.dto;
+package com.springmvc.angularjs.dto;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

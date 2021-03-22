@@ -1,6 +1,6 @@
-package com.apress.ravi.Exception;
+package com.springmvc.angularjs.Exception;
 
-import com.apress.ravi.dto.UserDTO;
+import com.springmvc.angularjs.dto.UserDTO;
 
 public class CustomErrorType extends UserDTO {
 

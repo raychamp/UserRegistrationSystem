@@ -1,4 +1,4 @@
-package com.apress.ravi;
+package com.springmvc.angularjs;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
