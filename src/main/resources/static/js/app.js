@@ -1,7 +1,3 @@
-/**
- * 
- */
-
 var app = angular.module('userregistrationsystem', ['ngRoute', 'ngResource']);
 
 app.config(function($routeProvider) {

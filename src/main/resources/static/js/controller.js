@@ -30,8 +30,7 @@ app.controller(
 					}
 				});
 
-app.controller('registerUserController', function($scope, $http, $location,
-		$route) {
+app.controller('registerUserController', function($scope, $http, $location,	$route) {
 
 	$scope.submitUserForm = function() {
 		$http({
