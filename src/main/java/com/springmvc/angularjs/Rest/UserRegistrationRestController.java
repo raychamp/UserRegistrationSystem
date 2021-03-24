@@ -39,7 +39,9 @@ public class UserRegistrationRestController {
 	public void setUserJpaRepository(UserJpaRepository userJpaRepository) {
 		this.userJpaRepository = userJpaRepository;
 	}
-
+/*
+ * List all users - GET - /
+ * */
 	@GetMapping("/")
 	public ResponseEntity<List<UserDTO>> listAllUsers() {
 		logger.info("Fetching all users");
@@ -49,6 +51,10 @@ public class UserRegistrationRestController {
 		}
 		return new ResponseEntity<List<UserDTO>>(users, HttpStatus.OK);
 	}
+	
+	/*
+	 * Get user by id - GET - /{id}
+	 * */
 
 	@GetMapping("/{id}")
 	public ResponseEntity<UserDTO> getUserById(@PathVariable("id") final Long id) {
@@ -64,6 +70,8 @@ public class UserRegistrationRestController {
 	
 	
 	/**
+	 * Create a user - POST - /
+	 * 
 	 * @exception MethodArgumentNotValidException
 	 *                (validation fails)
 	 */
@@ -81,6 +89,9 @@ public class UserRegistrationRestController {
 		return new ResponseEntity<UserDTO>(user, HttpStatus.CREATED);
 	}
 
+	/*
+	 * Update user - PUT - /{id}
+	 * */
 	@PutMapping(value = "/{id}", consumes = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<UserDTO> updateUser(@PathVariable("id") final Long id, @RequestBody UserDTO user) {
 		logger.info("Updating User with id {}", id);
@@ -97,6 +108,9 @@ public class UserRegistrationRestController {
 		return new ResponseEntity<UserDTO>(currentUser, HttpStatus.OK);
 	}
 
+	/*
+	 * Delete user - DELETE - /{id}
+	 * **/
 	@DeleteMapping("/{id}")
 	public ResponseEntity<UserDTO> deleteUser(@PathVariable("id") final Long id) {
 		logger.info("Deleting User with id {}", id);
